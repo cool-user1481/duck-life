@@ -489,6 +489,8 @@ function SNOT_ACTION(a, e, n) {
         }
     }
 
+    function THE_ROCK_ACTION(a, e, n) {}
+
 function __pickRandValid(a, e) {
     const n = -1 !== a,
         t = -1 !== e;
