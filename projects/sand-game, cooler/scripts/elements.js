@@ -463,6 +463,32 @@ function BURNING_THERMITE_ACTION(a, e, n) {
     const d = below(e, n, FIRE); - 1 !== d && (gameImagedata32[d] = BACKGROUND), doGravity(a, e, n, !1, 99) || doDensitySink(a, e, n, WATER, !1, 95) || doDensitySink(a, e, n, SALT_WATER, !1, 95) || doDensitySink(a, e, n, OIL, !1, 95)
 }
 
+function SNOT_ACTION(a, e, n) {
+    if (random() < 10) {
+        const d = e > 0 ? e - 1 : -1,
+            i = e < MAX_Y_IDX ? e + 1 : -1,
+            r = a > 0 ? a - 1 : -1,
+            m = a < MAX_X_IDX ? a + 1 : -1,
+            A = [r, m, a],
+            I = [i, d, e];
+        var t, o;
+        for (random() < 50 && (A[0] = m, A[1] = r), random() < 50 && (I[0] = d, I[1] = i), o = 0; 3 !== o; o++) {
+            const d = I[o];
+            if (-1 === d) continue;
+            if (random() < 25 && d !== i) continue;
+            const r = d * width;
+            for (t = 0; 3 !== t; t++) {
+                const o = A[t];
+                if (-1 === o) continue;
+                if (d === e && o === a) continue;
+                if (o !== a && d !== e) continue;
+                const i = r + o,
+                    m = gameImagedata32[i];
+                if (m !== ACID && m !== BACKGROUND && m !== WATER && m !== SALT_WATER && m !== ICE && m !== CHILLED_ICE && m !== CRYO) return d !== e + 1 ? void(gameImagedata32[i] = BACKGROUND) : (gameImagedata32[n] = BACKGROUND, void((m !== WALL || random() < 75) && (gameImagedata32[i] = SNOT)))
+            }
+        }
+    }
+
 function __pickRandValid(a, e) {
     const n = -1 !== a,
         t = -1 !== e;
