@@ -19,7 +19,7 @@
         max-width: 600px;
         margin: 20px auto;
       }
-      button {
+      .back-to-top {
         cursor: pointer;
         background-color: #22c55e;
         border: none;
@@ -75,6 +75,31 @@
           transform: rotate(360deg);
         }
       }
+      
+      
+      
+      button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  background-color: #04AA6D;
+  color: white;
+  border: 7px solid #04AA6D; /* Green */
+}
+
+button:hover {
+  background-color: #ffffff; /* Green */
+  color: black;
+}
     </style>
   </head>
   <body style="background-color: #121212; color: #ffffff; font-family: sans-serif; text-decoration: none; text-align: center;">
@@ -83,14 +108,31 @@
     <div id="loader" style="display: block; border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 0.3s linear infinite; margin: auto; margin-top: 1rem;"></div>
     <div id="game-container" class="flex-container"></div>
     <p class="text-center">
-      <a href="/index.html" style="text-decoration: none;">
-        <button style="cursor: pointer; background-color: #b625cc; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 20px; margin-top: 5px;">
-          Go to the homepage
-        </button>
-      </a>
+     
+     
+        <button class="abutton" onclick="
+        e()
+        ">See All Games</button>
+      
     </p>
-    <button id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px;">Back to top</button>
+    <button class="back-to-top" id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px;">Back to top</button>
     <script>
+    function e(){ 
+        document.getElementsByTagName(`html`)[0].innerHTML = `<iframe src='https://3kh0-peach.vercel.app'></iframe>
+        <style>
+        body {
+    margin: 0;            /* Reset default margin */
+}
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+} </style>`;
+        }
+        
+        
       let games = [];
       fetch("config/games.json")
       .then((response) => response.json())
@@ -144,6 +186,7 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       };
+      
     </script>
   </body>
 </html>
