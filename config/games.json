@@ -5,11 +5,6 @@
     "title": "1"
   },
   {
-    "link": "https://3kh0-peach.vercel.app/ducklife4",
-    "imgSrc": "https://github.com/cool-user1481/3kh0/blob/main/ducklife4/splash.jpg?raw=true",
-    "title": "Duck life 4"
-  },
-  {
     "link": "projects/1v1space/index.html",
     "imgSrc": "projects/1v1space/splash.png",
     "title": "1v1.space"
@@ -233,6 +228,11 @@
     "link": "projects/ducklife3/index.html",
     "imgSrc": "projects/ducklife3/duck.png",
     "title": "Duck Life 3"
+  },
+  {
+    "link": "https://3kh0-peach.vercel.app/ducklife4",
+    "imgSrc": "https://github.com/cool-user1481/3kh0/blob/main/ducklife4/splash.jpg?raw=true",
+    "title": "Duck Life 4"
   },
   {
     "link": "projects/edgenotfound/index.html",
