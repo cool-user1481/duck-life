@@ -104,7 +104,7 @@ button:hover {
   </head>
   <body style="background-color: #121212; color: #ffffff; font-family: sans-serif; text-decoration: none; text-align: center;">
     <h1 style="font-size: 3em; text-align: center;">Games</h1>
-    <button class="abutton" onclick="e()">See All Games</button>
+    <a href="3kh0-peach.vercel.app"><button class="abutton">See All Games</button></a>
     <input type="text" id="search" onkeyup="searchGames()" placeholder="Search for games..." style="width: 100%; font-size: 18px; padding: 6px 20px; margin: auto; border-radius: 30px; max-width: 600px; margin-bottom: 10px;" />
     <div id="loader" style="display: block; border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 0.3s linear infinite; margin: auto; margin-top: 1rem;"></div>
     <div id="game-container" class="flex-container"></div>
@@ -112,20 +112,7 @@ button:hover {
     </p>
     <button class="back-to-top" id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px;">Back to top</button>
     <script>
-    function e(){ 
-        document.getElementsByTagName(`html`)[0].innerHTML = `<iframe src='https://3kh0-peach.vercel.app'></iframe>
-        <style>
-        body {
-    margin: 0;            /* Reset default margin */
-}
-iframe {
-    display: block;       /* iframes are inline by default */
-    background: #000;
-    border: none;         /* Reset default border */
-    height: 100vh;        /* Viewport-relative units */
-    width: 100vw;
-} </style>`;
-        }
+ 
         
         
       let games = [];
