@@ -78,33 +78,11 @@
       
       
       
-      button {
-  background-color: #04AA6D;
-  border: none;
-  color: white;
-  padding: 5px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition-duration: 0.4s;
-  background-color: #04AA6D;
-  color: white;
-  border: 7px solid #04AA6D; /* Green */
-}
-
-button:hover {
-  background-color: #ffffff; /* Green */
-  color: black;
-}
+    
     </style>
   </head>
   <body style="background-color: #121212; color: #ffffff; font-family: sans-serif; text-decoration: none; text-align: center;">
     <h1 style="font-size: 3em; text-align: center;">Games</h1>
-    <a href="https://3kh0-peach.vercel.app"><button class="abutton">See All Games</button></a>
     <input type="text" id="search" onkeyup="searchGames()" placeholder="Search for games..." style="width: 100%; font-size: 18px; padding: 6px 20px; margin: auto; border-radius: 30px; max-width: 600px; margin-bottom: 10px;" />
     <div id="loader" style="display: block; border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 0.3s linear infinite; margin: auto; margin-top: 1rem;"></div>
     <div id="game-container" class="flex-container"></div>
