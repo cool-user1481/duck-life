@@ -113,9 +113,7 @@ button:hover {
     <button class="back-to-top" id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px;">Back to top</button>
     <script>
  
-        if (window.self == window.top) {
-          window.onload = function(){ document.getElementsByTagName("html")[0].innerHTML = "Stop. Don't play on this<br>losser lamer wana be<br>like oh, totally";};
-      }
+      
         
       let games = [];
       fetch("config/games.json")
